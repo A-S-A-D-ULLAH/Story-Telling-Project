@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StoryNest | Text to Audiobook</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h2, h1 {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-tr from-yellow-50 via-white to-amber-100 text-gray-800 min-h-screen">
+
+  <nav class="bg-amber-700 text-white shadow-lg py-4 mb-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">📖 StoryNest</h1>
+      <div class="space-x-4 text-sm">
+        <a href="/" class="hover:text-yellow-200">Home</a>
+        <a href="#" class="hover:text-yellow-200">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-4">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="bg-amber-800 text-white py-4 mt-10 text-center">
+    <p>© 2025 StoryNest — Your Text-to-Audio Companion</p>
+  </footer>
+
+</body>
+</html>

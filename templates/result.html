@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto mt-10 p-8 rounded-3xl shadow-2xl bg-white/90 backdrop-blur-md text-center">
+    <h2 class="text-3xl font-bold text-amber-800 mb-6">📢 Your Story Audio</h2>
+
+    <audio controls class="w-full mb-6">
+        <source src="{{ url_for('static', filename='audio/' + audio_file) }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="flex flex-col md:flex-row justify-center gap-4">
+        <a href="{{ url_for('download', filename=audio_file) }}" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+            ⬇️ Download Audio
+        </a>
+        <a href="{{ url_for('home') }}" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+            🔁 Create Another Story
+        </a>
+    </div>
+</div>
+{% endblock %}
